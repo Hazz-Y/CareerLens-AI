@@ -20,7 +20,7 @@ import {
   Activity,
 } from "lucide-react";
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string; color?: string; style?: React.CSSProperties }>> = {
   LayoutDashboard,
   UserCircle,
   Sparkles,
@@ -91,7 +91,7 @@ export default function Sidebar({ items, activeItem, onItemClick }: SidebarProps
                 <Icon
                   size={20}
                   className="flex-shrink-0"
-                  style={{ color: isActive ? "#818cf8" : undefined }}
+                  color={isActive ? "#818cf8" : "currentColor"}
                 />
                 {!collapsed && (
                   <span
