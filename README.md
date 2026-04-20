@@ -1,5 +1,7 @@
 # CareerLens AI 🎓✨
 
+🔗 **[Live Demo: CareerLens AI on Vercel](https://careerportal-umber.vercel.app)**
+
 **CareerLens AI** is a premium, modern, AI-powered student career intelligence and placement-risk modeling dashboard. It is designed to predict placement timelines, estimate expected starting salaries, and identify students who may face delays in securing employment, specifically tailored for education loan borrowers, students, and lenders.
 
 ## 🚀 Features
