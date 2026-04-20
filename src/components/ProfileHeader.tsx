@@ -13,7 +13,7 @@ interface ProfileHeaderProps {
   department: string;
   batch: string;
   campus: string;
-  status: "Placement Ready" | "Needs Improvement" | "High Risk";
+  status: string;
   lastUpdated: string;
   avatarInitials: string;
   cgpa: number;
@@ -46,9 +46,19 @@ export default function ProfileHeader({
       text: "#be123c",
       border: "#fecdd3",
     },
+    "Placed": {
+      bg: "var(--indigo-50)",
+      text: "var(--indigo-600)",
+      border: "var(--indigo-200)",
+    },
+    "Interview Stage": {
+      bg: "var(--blue-50)",
+      text: "var(--blue-600)",
+      border: "var(--blue-200)",
+    },
   };
 
-  const sc = statusColors[status];
+  const sc = statusColors[status] || { bg: "#f3f4f6", text: "#4b5563", border: "#d1d5db" };
 
   return (
     <div className="card-premium overflow-hidden animate-fade-in">
