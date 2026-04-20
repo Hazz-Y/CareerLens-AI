@@ -16,6 +16,7 @@ import {
   BookOpen,
   FileText,
   CheckCircle2,
+  LucideIcon
 } from "lucide-react";
 
 export interface StudentProfileData {
@@ -40,7 +41,24 @@ interface EditableProfileProps {
   onSave: (updated: StudentProfileData) => void;
 }
 
-const fieldGroups = [
+interface FieldDef {
+  key: string;
+  label: string;
+  type: string;
+  icon: LucideIcon;
+  options?: string[];
+  step?: string;
+  min?: string;
+  max?: string;
+}
+
+interface FieldGroup {
+  title: string;
+  icon: LucideIcon;
+  fields: FieldDef[];
+}
+
+const fieldGroups: FieldGroup[] = [
   {
     title: "Personal Information",
     icon: User,
