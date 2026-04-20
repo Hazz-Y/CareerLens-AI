@@ -441,7 +441,7 @@ function ReportSummaryCard({
   profile,
   riskData,
 }: {
-  profile: { name: string; registrationId: string; department: string; batch: string; campus: string; cgpa: number; resumeScore: number; status: string; [key: string]: unknown };
+  profile: StudentProfileData;
   riskData: typeof riskAnalysis;
 }) {
   return (
